@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы о продуктах</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        .product-list, .review-list {
+            margin-top: 20px;
+        }
+        .product-item, .review-item {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .review-item button {
+            background-color: #d9534f;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+        .review-item button:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="add-review-container">
+        <h2>Добавить отзыв</h2>
+        <label for="product-name">Название продукта:</label>
+        <input type="text" id="product-name">
+        <label for="product-review">Отзыв:</label>
+        <textarea id="product-review" rows="4"></textarea>
+        <button id="add-review-button">Добавить отзыв</button>
+    </div>
+
+    <div class="container" id="view-reviews-container">
+        <h2>Отзывы о продуктах</h2>
+        <div class="product-list" id="product-list"></div>
+        <div class="review-list" id="review-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
